@@ -2,15 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleGameManager : MonoBehaviour {
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+public class SimpleGameManager : MonoBehaviour
+{
+    public GameObject Selected = null;
+    private static SimpleGameManager instance = null;
+    public static SimpleGameManager Instance
+    {
+        get
+        {
+            if (SimpleGameManager.instance == null)
+            {
+                SimpleGameManager.instance = FindObjectOfType<SimpleGameManager>();
+                if (SimpleGameManager.instance == null)
+                {
+                    GameObject go = new GameObject();
+                    go.name = "SimpleGameManager";
+                    SimpleGameManager.instance = go.AddComponent<SimpleGameManager>();
+                    DontDestroyOnLoad(go);
+                }
+            }
+            return SimpleGameManager.instance;
+        }
+    }
+    // Class Methods
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 }
