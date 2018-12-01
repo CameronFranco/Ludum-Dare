@@ -9,6 +9,10 @@ public class CameraPan : MonoBehaviour {
     void Start () {
         rb = gameObject.AddComponent<Rigidbody2D>();
         rb.gravityScale = 0;
-        rb.AddForce(new Vector2(70f, 0.0f));
+        GameObject ship = GameObject.Find("Ship");
+        Rigidbody2D ship_rb = ship.GetComponent<Rigidbody2D>();
+
+        rb.AddForce(new Vector2(140f, 0.0f));
+        ship_rb.AddForce(new Vector2(140f, 0.0f));
     }
 }
