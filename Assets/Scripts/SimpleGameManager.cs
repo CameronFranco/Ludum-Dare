@@ -88,6 +88,7 @@ public class SimpleGameManager : MonoBehaviour
             Island2 = false;
             Island3 = false;
         }
+    }
     public void AddCrew(GameObject crewmate)
     {
         DontDestroyOnLoad(crewmate);
