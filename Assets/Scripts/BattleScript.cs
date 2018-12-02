@@ -3,11 +3,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-interface IAttacker {
+/*interface IAttacker {
     void TakeDamage (double damage);
 }
 
-public class Ship
+ public class Ship
 {
     public int Level;
     public double Health;
@@ -72,52 +72,58 @@ class Player : Mobile, IAttacker
     {
         this.Health -= damage;
     }
-}
-
-class BattleScript : MonoBehaviour
+}*/
+namespace  GameBattleScripts
 {
-    [HideInInspector]
-    public bool battleStart = false;
 
-    public Text levelText;
-
-
-    public void Start ()
+    class BattleScript : MonoBehaviour
     {
-        levelText.text = "A horde of natives leaps out and attacks you!";
-        Debug.Log("A horde of natives leaps out and attacks you!");
+        [HideInInspector]
+        public bool battleStart = false;
+        [HideInInspector]
+        public bool battleEnd = false;
 
-        Enemy natives = new Enemy("natives", 1);
-        Player player = new Player(2);
-        
+        public Text levelText;
+        private string WinnerText = "";
 
-        if (Input.GetKey("space"))
+
+        public void Start ()
         {
-            levelText.text = "";
-            battleStart = true;
-        }
+            levelText.text = "A horde of natives leaps out and attacks you!";
+            Debug.Log("A horde of natives leaps out and attacks you!");
 
-        if (battleStart)
-        {
+            Enemy natives = new Enemy("natives", 2);
+            Player player = new Player(1);
+
             while (natives.Health > 0 && player.Health > 0)
             {
                 natives.TakeDamage(player.Damage);
                 player.TakeDamage(natives.Damage);
+
             }
+
+            if (natives.Health > 0)
+            {
+                WinnerText = "Your ship was lost...";
+                natives.Health = natives.startingHealth;
+            } 
+            else if (player.Health > 0)
+            {
+                WinnerText = "Hurrah! You beat the natives!";
+                natives.Health = natives.startingHealth;
+            }
+            
+            
         }
-        if (natives.Health > 0)
+
+        public void Update () 
         {
-            levelText.text = "Your ship was lost...";
-            Debug.Log("Your ship was lost...");
-            battleStart = false;
-            natives.Health = natives.startingHealth;
-        } else
-        {
-            levelText.text = "Hurrah! You beat the natives!";
-            Debug.Log("Hurrah! You beat the natives!");
-            battleStart = false;
-            natives.Health = natives.startingHealth;
+            if (Input.GetKeyDown("space"))
+            {
+                levelText.text = WinnerText;
+                Debug.Log(WinnerText);
+            }
+
         }
-        
     }
 }
