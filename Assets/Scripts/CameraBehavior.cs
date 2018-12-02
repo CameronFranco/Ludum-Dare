@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraPan : MonoBehaviour {
+public class CameraBehavior : MonoBehaviour {
 
     private Rigidbody2D rb;
 
@@ -14,5 +14,9 @@ public class CameraPan : MonoBehaviour {
 
         rb.AddForce(new Vector2(140f, 0.0f));
         ship_rb.AddForce(new Vector2(140f, 0.0f));
+
+        AudioClip menuMusic = Resources.Load<AudioClip>("Music/MainMenu");
+        SoundManager.Instance.PlayMusic(menuMusic);
+
     }
 }
