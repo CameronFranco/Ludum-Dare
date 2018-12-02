@@ -14,6 +14,7 @@ public class SimpleGameManager : MonoBehaviour
 {
     public GameObject Selected = null;
     private static SimpleGameManager instance = null;
+    public List<GameObject> Crew = new List<GameObject>();
     public static SimpleGameManager Instance
     {
         get
@@ -45,4 +46,9 @@ public class SimpleGameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void AddCrew(GameObject crewmate)
+    {
+        Crew.Add(crewmate);
+    }
 }
+
