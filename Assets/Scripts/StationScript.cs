@@ -9,8 +9,7 @@ using UnityEngine.EventSystems;
 public class StationScript : MonoBehaviour, IPointerClickHandler
 {
     Vector3 position;
-    Vector3 crewmemberPosition;
-
+    Vector3 crewmemberPositio
     SimpleGameManager GM;
     void Awake()
     {
