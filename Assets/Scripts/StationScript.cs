@@ -8,8 +8,8 @@ using UnityEngine.EventSystems;
 
 public class StationScript : MonoBehaviour, IPointerClickHandler
 {
-    new Vector3 position;
-    new Vector3 crewmemberPosition;
+    Vector3 position;
+    Vector3 crewmemberPosition;
    
     SimpleGameManager GM;
     void Awake()
