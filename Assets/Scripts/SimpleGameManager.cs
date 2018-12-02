@@ -48,6 +48,7 @@ public class SimpleGameManager : MonoBehaviour
     }
     public void AddCrew(GameObject crewmate)
     {
+        DontDestroyOnLoad(crewmate);
         Crew.Add(crewmate);
     }
 }
