@@ -12,8 +12,8 @@ public class CameraBehavior : MonoBehaviour {
         GameObject ship = GameObject.Find("Ship");
         Rigidbody2D ship_rb = ship.GetComponent<Rigidbody2D>();
 
-        rb.AddForce(new Vector2(140f, 0.0f));
-        ship_rb.AddForce(new Vector2(140f, 0.0f));
+        rb.AddForce(new Vector2(100f, 0.0f));
+        ship_rb.AddForce(new Vector2(100f, 0.0f));
 
         AudioClip menuMusic = Resources.Load<AudioClip>("Music/MainMenu");
         SoundManager.Instance.LoopMusic(menuMusic);
