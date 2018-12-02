@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class island2script : MonoBehaviour
 {
-
     public void SceneSwitcher()
     {
-        SceneManager.LoadScene(3);
+        SimpleGameManager GM = SimpleGameManager.Instance;
+        if (GM.IsAlllowed(3))
+        {
+            GM.visitIsland (2);
+            SceneManager.LoadScene(3);
+        }
+
     }
 }
