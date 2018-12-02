@@ -8,9 +8,9 @@ using UnityEngine.EventSystems;
 
 public class StationScript : MonoBehaviour, IPointerClickHandler
 {
-    new Vector3 position;
-    new Vector3 crewmemberPosition;
-   
+    Vector3 position;
+    Vector3 crewmemberPosition;
+
     SimpleGameManager GM;
     void Awake()
     {
@@ -27,11 +27,11 @@ public class StationScript : MonoBehaviour, IPointerClickHandler
             mat.color = Color.white;
     }
     void Start () {
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 }
