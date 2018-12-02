@@ -8,15 +8,23 @@ using UnityEngine.EventSystems;
 
 public class StationScript : MonoBehaviour, IPointerClickHandler
 {
+    new Vector3 position;
+    new Vector3 crewmemberPosition;
+   
     SimpleGameManager GM;
     void Awake()
     {
         GM = SimpleGameManager.Instance;
+        position = this.transform.position;
+        crewmemberPosition = new Vector3(position.x, position.y, (position.z - 10.0f));
     }
 
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        GM.Selected.transform.position = this.transform.position;
+        GM.Selected.transform.position = crewmemberPosition;
+        Debug.Log("Station clicked");
+        Material mat = GM.Selected.GetComponent<Renderer>().material;
+            mat.color = Color.white;
     }
     void Start () {
 		

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class CrewmemberScript : MonoBehaviour, IPointerClickHandler {
-    SimpleGameManager GM;
+    SimpleGameManager GM; 
 
     // On Awake, set the variable to our SimpleGameManager.Instance
     // (Note the capital 'I')
@@ -15,11 +15,17 @@ public class CrewmemberScript : MonoBehaviour, IPointerClickHandler {
     //Detect if a click occurs
     public void OnPointerClick(PointerEventData pointerEventData)
     {
-        //Output to console the clicked GameObject's name and the following message. You can replace this with your own actions for when clicking the GameObject.
-
         GM.Selected = this.gameObject;
         Debug.Log(name + " Game Object Clicked!");
-        
+        Material mat = gameObject.GetComponent<Renderer>().material;
+        if (mat.color == Color.green)
+        {
+            mat.color = Color.white;
+        }
+        else
+        {
+            mat.color = Color.green;
+        }
     }
 
     // Use this for initialization
