@@ -5,7 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+  - enabled: 0
+    path: Assets/Scenes/SplashScreen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 7612d4a89efca45d4beb87c712bac517
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/05c6641179c034accaf5f4a55f957bcc
+    guid: 05c6641179c034accaf5f4a55f957bcc
+  - enabled: 1
+    path: Assets/Scenes/IslandSelectMenu.unity
+    guid: bc0a4f6c4fa3f4eedaf31732739985d9
+  - enabled: 1
+    path: Assets/Scenes/Island1.unity
+    guid: 6e201b89dc4244bde9a42bbd35bb920e
+  - enabled: 1
+    path: Assets/Scenes/island2.unity
+    guid: 9ab8adaf3ab0f49bf870f3a5bc75c2c9
+  - enabled: 1
+    path: Assets/Scenes/island3.unity
+    guid: 9b6eebec3e83a40b2a2b732866cd8b95
+  - enabled: 1
+    path: Assets/Scenes/island4.unity
+    guid: ae660c6339e9240b4a07395ee70c59a7
+  - enabled: 1
+    path: Assets/Scenes/island5.unity
+    guid: 55048b781765b4ea9998a813fda6ac83
   m_configObjects: {}
