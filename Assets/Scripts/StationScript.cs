@@ -10,8 +10,8 @@ public class StationScript : MonoBehaviour, IPointerClickHandler
 {
     Vector3 position;
     Vector3 crewmemberPosition;
-
     SimpleGameManager GM;
+    
     void Awake()
     {
         GM = SimpleGameManager.Instance;

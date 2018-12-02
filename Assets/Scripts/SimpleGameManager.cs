@@ -1,10 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +14,7 @@ public class SimpleGameManager : MonoBehaviour
     bool Island5 = true;
 
     private static SimpleGameManager instance = null;
+    public List<GameObject> Crew = new List<GameObject>();
     public static SimpleGameManager Instance
     {
         get
@@ -93,5 +88,10 @@ public class SimpleGameManager : MonoBehaviour
             Island2 = false;
             Island3 = false;
         }
+    public void AddCrew(GameObject crewmate)
+    {
+        DontDestroyOnLoad(crewmate);
+        Crew.Add(crewmate);
     }
 }
+
