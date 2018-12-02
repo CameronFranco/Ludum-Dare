@@ -16,7 +16,7 @@ public class CameraBehavior : MonoBehaviour {
         ship_rb.AddForce(new Vector2(140f, 0.0f));
 
         AudioClip menuMusic = Resources.Load<AudioClip>("Music/MainMenu");
-        SoundManager.Instance.PlayMusic(menuMusic);
+        SoundManager.Instance.LoopMusic(menuMusic);
 
     }
 }
