@@ -2,8 +2,8 @@ using System;
 using System.Collections;
 
 namespace GameBattleScripts {
- 
-    class Player : Mobile, IAttacker
+
+    public class Player : Mobile, IAttacker
     {
         private double Weapon;
         public double Damage;

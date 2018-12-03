@@ -55,6 +55,24 @@ public class SoundManager : MonoBehaviour
 		MusicSource.Play();
 	}
 
+	public void StopMusic(){
+		MusicSource.loop = false;
+		MusicSource.Stop();
+	}
+
+	public IEnumerator FadeOutMusic(float fadeTime){
+		float startVolume = this.MusicSource.volume;
+		while (MusicSource.volume > 0) {
+				Debug.Log(MusicSource.GetHashCode());
+				MusicSource.volume -= startVolume * Time.deltaTime / fadeTime;
+
+				yield return null;
+		}
+		MusicSource.loop = false;
+		MusicSource.Stop();
+		MusicSource.volume = startVolume;
+	}
+
 	// Play a random clip from an array, and randomize the pitch slightly.
 	public void RandomSoundEffect(params AudioClip[] clips)
 	{
