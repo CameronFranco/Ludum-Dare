@@ -8,6 +8,11 @@ public class Island3script : MonoBehaviour
 
     public void SceneSwitcher()
     {
-        SceneManager.LoadScene(4);
+        SimpleGameManager GM = SimpleGameManager.Instance;
+        if (GM.IsAlllowed(3))
+        {
+            GM.visitIsland(3);
+            SceneManager.LoadScene(4);
+        }
     }
 }

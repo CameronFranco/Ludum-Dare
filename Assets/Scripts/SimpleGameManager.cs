@@ -8,10 +8,10 @@ public class SimpleGameManager : MonoBehaviour
 {
     public GameObject Selected = null;
     bool Island1 = true;
-    bool Island2 = true;
-    bool Island3 = true;
-    bool Island4 = true;
-    bool Island5 = true;
+    bool Island2 = false;
+    bool Island3 = false;
+    bool Island4 = false;
+    bool Island5 = false;
 
     private static SimpleGameManager instance = null;
     public List<GameObject> Crew = new List<GameObject>();
@@ -51,13 +51,13 @@ public class SimpleGameManager : MonoBehaviour
         if (island == 1){
             return Island1;
         }if (island == 2){
-            return Island1;
+            return Island2;
         }if (island == 3){
-            return Island1;
+            return Island3;
         }if (island == 4){
-            return Island1;
+            return Island4;
         }if (island == 5){
-            return Island1;
+            return Island5;
         }
          else {
             return false;
@@ -65,28 +65,33 @@ public class SimpleGameManager : MonoBehaviour
     }
     public void visitIsland (int island)
     {
+        // Islands go:
+        //  1 -> 3 -> 2
+        //  1 -> 4 -> 5
         Island1 = false;
         if (island == 2){
+            Island2 = false;
+            Island3 = false;
             Island4 = false;
             Island5 = false;
-            Island2 = false;
         }
         if (island == 4){
-            Island4 = false;
-            Island3 = false;
             Island2 = false;
+            Island3 = false;
+            Island4 = false;
+            Island5 = true;
         }
         if (island == 3){
+            Island2 = true;
+            Island3 = false;
             Island4 = false;
             Island5 = false;
-            Island2 = false;
-            Island3 = false;
         }
         if (island == 5){
-            Island4 = false;
-            Island5 = false;
             Island2 = false;
             Island3 = false;
+            Island4 = false;
+            Island5 = false;
         }
     }
     public void AddCrew(GameObject crewmate)
@@ -95,4 +100,3 @@ public class SimpleGameManager : MonoBehaviour
         Crew.Add(crewmate);
     }
 }
-
