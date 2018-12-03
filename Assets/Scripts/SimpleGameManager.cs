@@ -12,6 +12,7 @@ public class SimpleGameManager : MonoBehaviour
     bool Island3 = false;
     bool Island4 = false;
     bool Island5 = false;
+    public GameBattleScripts.Player player;
 
     private static SimpleGameManager instance = null;
     public List<GameObject> Crew = new List<GameObject>();
@@ -39,6 +40,7 @@ public class SimpleGameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            instance.player = new GameBattleScripts.Player(3);
             DontDestroyOnLoad(this.gameObject);
         }
         else
