@@ -10,6 +10,7 @@ public class Island1script : MonoBehaviour
     {
         SimpleGameManager GM = SimpleGameManager.Instance;
         GM.visitIsland (1);
+        SoundManager.Instance.StopMusic();
         SceneManager.LoadScene(2);
     }
 }

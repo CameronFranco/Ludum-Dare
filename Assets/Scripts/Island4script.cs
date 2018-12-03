@@ -12,6 +12,7 @@ public class Island4script : MonoBehaviour
         if (GM.IsAlllowed(4))
         {
             GM.visitIsland(4);
+            SoundManager.Instance.StopMusic();
             SceneManager.LoadScene(5);
         }
     }

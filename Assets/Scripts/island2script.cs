@@ -11,6 +11,7 @@ public class island2script : MonoBehaviour
         if (GM.IsAlllowed(3))
         {
             GM.visitIsland (2);
+            SoundManager.Instance.StopMusic();
             SceneManager.LoadScene(3);
         }
 
