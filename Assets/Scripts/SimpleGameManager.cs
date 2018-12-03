@@ -98,7 +98,10 @@ public class SimpleGameManager : MonoBehaviour
     }
     public void AddCrew(GameObject crewmate)
     {
-        DontDestroyOnLoad(crewmate);
-        Crew.Add(crewmate);
+        if (Crew.Count < 4 ){
+            DontDestroyOnLoad(crewmate);
+            crewmate.SetActive(false);
+            Crew.Add(crewmate);
+        }
     }
 }

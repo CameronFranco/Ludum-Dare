@@ -14,17 +14,20 @@ namespace  GameBattleScripts
         [HideInInspector]
         public bool battleEnd = false;
 
+        public string enemyName;
+        public int enemyLevel;
+
         public Text levelText;
         private string WinnerText = "";
 
 
         public void Start ()
         {
-            levelText.text = "A horde of natives leaps out and attacks you!";
-            Debug.Log("A horde of natives leaps out and attacks you!");
+            levelText.text = "A horde of "+ enemyName +" leaps out and attacks you!";
+            Debug.Log("A horde of "+ enemyName +" leaps out and attacks you!");
 
             SimpleGameManager GM = SimpleGameManager.Instance;
-            Enemy natives = new Enemy("natives", 2);
+            Enemy natives = new Enemy(enemyName, enemyLevel);
             Player player = GM.player;
 
             Debug.Log("The player's health: "+player.Health);
@@ -45,7 +48,7 @@ namespace  GameBattleScripts
             }
             else if (player.Health > 0)
             {
-                WinnerText = "Hurrah! You beat the natives!";
+                WinnerText = "Hurrah! You beat the "+enemyName+"!";
                 natives.Health = natives.startingHealth;
             }
 

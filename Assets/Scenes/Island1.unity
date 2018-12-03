@@ -1055,4 +1055,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battleStart: 0
   battleEnd: 0
+  enemyName: Cannibals
+  enemyLevel: 2
   levelText: {fileID: 1291257454}
