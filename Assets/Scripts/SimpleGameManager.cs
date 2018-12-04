@@ -116,7 +116,7 @@ public class SimpleGameManager : MonoBehaviour
             string oldCrewPosition = "";
             foreach(KeyValuePair<string, GameObject> cm in CrewPositions){
                 if(cm.Value == crewmate){
-                    crewPos = cm.Key;
+                    oldCrewPosition = cm.Key;
                 }
             }
             if (oldCrewPosition != ""){
