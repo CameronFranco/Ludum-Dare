@@ -16,6 +16,7 @@ public class SimpleGameManager : MonoBehaviour
 
     private static SimpleGameManager instance = null;
     public List<GameObject> Crew = new List<GameObject>();
+    public Dictionary<string, GameObject> CrewPositions = new Dictionary<string, GameObject>();
     public static SimpleGameManager Instance
     {
         get
@@ -47,6 +48,10 @@ public class SimpleGameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        CrewPositions.Add("Cabin", null);
+        CrewPositions.Add("Gun Deck", null);
+        CrewPositions.Add("Hold", null);
+        CrewPositions.Add("Treasure", null);
     }
     //can i got to this island
     public bool IsAlllowed (int island){
@@ -102,6 +107,23 @@ public class SimpleGameManager : MonoBehaviour
             DontDestroyOnLoad(crewmate);
             crewmate.SetActive(false);
             Crew.Add(crewmate);
+        }
+    }
+    public void AddCrew(string position, GameObject crewmate)
+    {
+        if (CrewPositions.ContainsKey(position))
+        {
+
+            if (CrewPositions.Keys.Count < 4)
+            {
+                DontDestroyOnLoad(crewmate);
+                crewmate.SetActive(true);
+                CrewPositions.Add(position, crewmate);
+            }
+        }
+        else
+        {
+            Debug.Log("PositionNotFound: " + position);
         }
     }
 }
