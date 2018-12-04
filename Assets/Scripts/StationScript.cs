@@ -16,7 +16,7 @@ public class StationScript : MonoBehaviour, IPointerClickHandler
     {
         GM = SimpleGameManager.Instance;
         position = this.transform.position;
-        crewmemberPosition = new Vector3(position.x, position.y, (position.z - 10.0f));
+        crewmemberPosition = new Vector3(position.x, position.y, (position.z - 0.1f));
     }
 
     public void OnPointerClick(PointerEventData pointerEventData)

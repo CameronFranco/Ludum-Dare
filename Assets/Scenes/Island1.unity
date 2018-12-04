@@ -231,7 +231,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 259178474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 1, y: -0.314, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 463528407}
@@ -272,11 +272,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.3505025, y: -0.09375555}
-      - {x: 0.94639796, y: -0.111872844}
-      - {x: 0.8887794, y: -0.21563123}
-      - {x: 0.8913781, y: -0.44332573}
-      - {x: 1.3578063, y: -0.42150533}
+    - - {x: 0.36061704, y: 0.2223423}
+      - {x: -0.010213852, y: 0.23749837}
+      - {x: -0.10526514, y: 0.0963074}
+      - {x: -0.12346226, y: -0.093954474}
+      - {x: 0.33880687, y: -0.105407566}
 --- !u!1 &318700657 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1709601277186026, guid: b868e8f03460d4478b9f72af82f73179,
@@ -327,7 +327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &463528406
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -416,7 +416,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 606003601}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0.278, y: -0.597, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 463528407}
@@ -457,11 +457,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.3505025, y: -0.09375555}
-      - {x: 0.94639796, y: -0.111872844}
-      - {x: 0.8887794, y: -0.21563123}
-      - {x: 0.8913781, y: -0.44332573}
-      - {x: 1.3578063, y: -0.42150533}
+    - - {x: 0.0812501, y: 0.1296876}
+      - {x: -0.9516588, y: 0.13541248}
+      - {x: -0.8187476, y: -0.11875367}
+      - {x: -0.41491854, y: -0.11906773}
+      - {x: 0.093866974, y: -0.1188398}
 --- !u!1 &652521240
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,7 +745,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4001919930660424, guid: b868e8f03460d4478b9f72af82f73179, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.1
       objectReference: {fileID: 0}
     - target: {fileID: 4001919930660424, guid: b868e8f03460d4478b9f72af82f73179, type: 2}
       propertyPath: m_LocalRotation.x
@@ -816,6 +816,10 @@ Prefab:
     - target: {fileID: 4617462631204062, guid: bd05165cfb546134dbbb602943f622e2, type: 2}
       propertyPath: m_RootOrder
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1695322844818644, guid: bd05165cfb546134dbbb602943f622e2, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd05165cfb546134dbbb602943f622e2, type: 2}
@@ -919,7 +923,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296361201}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 1.025, y: -0.597, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 463528407}
@@ -960,11 +964,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.3505025, y: -0.09375555}
-      - {x: 0.94639796, y: -0.111872844}
-      - {x: 0.8887794, y: -0.21563123}
-      - {x: 0.8913781, y: -0.44332573}
-      - {x: 1.3578063, y: -0.42150533}
+    - - {x: 0.14611578, y: 0.13322505}
+      - {x: -0.64096415, y: 0.136731}
+      - {x: -0.62228465, y: -0.1060493}
+      - {x: 0.060944438, y: -0.10601753}
+      - {x: 0.12277126, y: 0.0041347146}
 --- !u!1 &1449360558
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +993,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1449360558}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1}
+  m_LocalPosition: {x: 0, y: -0.832, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 463528407}
@@ -1030,11 +1034,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.3505025, y: -0.09375555}
-      - {x: 0.94639796, y: -0.111872844}
-      - {x: 0.8887794, y: -0.21563123}
-      - {x: 0.8913781, y: -0.44332573}
-      - {x: 1.3578063, y: -0.42150533}
+    - - {x: 1.0619187, y: 0.1089682}
+      - {x: -0.5530239, y: 0.10950613}
+      - {x: -0.4282987, y: -0.11115432}
+      - {x: 0.81262976, y: -0.11906779}
+      - {x: 0.97565055, y: -0.111228466}
 --- !u!1 &1932504928
 GameObject:
   m_ObjectHideFlags: 0
