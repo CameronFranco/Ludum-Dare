@@ -113,12 +113,20 @@ public class SimpleGameManager : MonoBehaviour
     {
         if (CrewPositions.ContainsKey(position))
         {
-
+            string oldCrewPosition = "";
+            foreach(KeyValuePair<string, GameObject> cm in CrewPositions){
+                if(cm.Value == crewmate){
+                    crewPos = cm.Key;
+                }
+            }
+            if (oldCrewPosition != ""){
+                CrewPositions[oldCrewPosition] = null;
+            }
             if (CrewPositions.Keys.Count < 4)
             {
                 DontDestroyOnLoad(crewmate);
                 crewmate.SetActive(true);
-                CrewPositions.Add(position, crewmate);
+                CrewPositions[position] = crewmate;
             }
         }
         else
