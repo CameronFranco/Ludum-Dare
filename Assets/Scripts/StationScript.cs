@@ -21,8 +21,9 @@ public class StationScript : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData pointerEventData)
     {
+
         GM.Selected.transform.position = crewmemberPosition;
-        Debug.Log("Station clicked");
+        Debug.Log("Station clicked: "+this.gameObject.name); 
         Material mat = GM.Selected.GetComponent<Renderer>().material;
             mat.color = Color.white;
     }
