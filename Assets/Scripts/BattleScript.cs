@@ -36,11 +36,16 @@ namespace  GameBattleScripts
 
             while (natives.Health > 0 && player.Health > 0)
             {
-                if 
+                if (natives.Health > 0) {
+                    player.TakeDamage(player.Damage);
+                    Debug.Log ("The player's health: " + player.Health);
+                }
+
+                if (player.Health > 0) {
                     natives.TakeDamage(player.Damage);
-                    player.TakeDamage(natives.Damage);
-                    Debug.Log("The player's health: " + player.Health);
-                    Debug.Log ("The enemy's health: " + natives.Health);
+                    Debug.Log("The enemy's health: " + natives.Health);
+                }
+                    
             }
 
             if (natives.Health > player.Health)
