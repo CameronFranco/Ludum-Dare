@@ -13,7 +13,7 @@ public class ShipClickBehavior : MonoBehaviour, IPointerClickHandler {
 	// Use this for initialization
 	void Start () {
         GM = SimpleGameManager.Instance;
-        pos = new Vector3(61.4f, 5, -1);
+        pos = new Vector3(51.8f, 24.6f, -1);
 	}
 
 	public void OnPointerClick(PointerEventData pointerEventData)
