@@ -18,6 +18,6 @@ public class PlayScript : MonoBehaviour
         go = (GameObject)Instantiate(Resources.Load("Prefabs/CrewMember"));
         GM.AddCrew(go);
     
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 }
