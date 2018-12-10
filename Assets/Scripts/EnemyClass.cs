@@ -21,21 +21,21 @@ namespace GameBattleScripts
     class Enemy : Mobile, IAttacker
     {
         public string Name;
-        private double Weapon;
+        private int WeaponMod;
         public double Damage;
         private int enemyMod;
         private static Random rnd = new Random ();
 
-        public Enemy(string name, int level) : base(level)
+        public Enemy(string name, int level, int weaponMod) : base(level)
         {
 
-            enemyMod = rnd.Next(1, 5);
+            enemyMod = rnd.Next(3, 8);
 
             this.Name = name;
             this.Health = level * enemyMod;
             this.startingHealth = level * enemyMod;
-            this.Weapon = 3.0;
-            this.Damage = level * this.Weapon;
+            this.WeaponMod = weaponMod;
+            this.Damage = level * this.WeaponMod;
         }
 
         public string Stats(){
