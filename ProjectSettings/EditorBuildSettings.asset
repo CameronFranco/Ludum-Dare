@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 7612d4a89efca45d4beb87c712bac517
   - enabled: 0
-    path: Assets/__DELETED_GUID_Trash/05c6641179c034accaf5f4a55f957bcc
-    guid: 05c6641179c034accaf5f4a55f957bcc
-  - enabled: 1
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
     path: Assets/Scenes/IslandSelectMenu.unity
     guid: bc0a4f6c4fa3f4eedaf31732739985d9
   - enabled: 1
