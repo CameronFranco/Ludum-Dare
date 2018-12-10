@@ -6,18 +6,20 @@ using UnityEngine.UI;
 
 public class ShipClickBehavior : MonoBehaviour, IPointerClickHandler {
 	SimpleGameManager GM;
-    public GameObject shipCutaway;
+    public GameObject prefab;
     public GameObject scroll;
 	public Text Text;
+    Vector3 pos;
 	// Use this for initialization
 	void Start () {
-		GM = SimpleGameManager.Instance;
+        GM = SimpleGameManager.Instance;
+        pos = new Vector3(61.4f, 5, -1);
 	}
 
 	public void OnPointerClick(PointerEventData pointerEventData)
     {
         Debug.Log("Island Ship clicked");
-        shipCutaway.SetActive(true);
+        Instantiate(prefab, pos, Quaternion.identity);
 		scroll.SetActive(false);
 		Text.text = "";
         
