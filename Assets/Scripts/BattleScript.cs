@@ -16,6 +16,7 @@ namespace  GameBattleScripts
 
         public string enemyName;
         public int enemyLevel;
+        public int weaponMod;
 
         public Text levelText;
         private string WinnerText = "";
@@ -27,26 +28,32 @@ namespace  GameBattleScripts
             Debug.Log("A horde of "+ enemyName +" leaps out and attacks you!");
 
             SimpleGameManager GM = SimpleGameManager.Instance;
-            Enemy natives = new Enemy(enemyName, enemyLevel);
+            Enemy natives = new Enemy(enemyName, enemyLevel, weaponMod);
             Player player = GM.player;
 
-            Debug.Log("The player's health: "+player.Health);
-            Debug.Log ("The enemy: " + natives.Stats());
+            Debug.Log("The player's health: " + player.Health);
+            Debug.Log (natives.Stats());
 
             while (natives.Health > 0 && player.Health > 0)
             {
-                natives.TakeDamage(player.Damage);
-                player.TakeDamage(natives.Damage);
-                Debug.Log("The player's health: "+player.Health);
-                Debug.Log ("The enemy's health: " + natives.Health);
+                if (natives.Health > 0) {
+                    player.TakeDamage(player.Damage);
+                    Debug.Log ("The player's health: " + player.Health);
+                }
+
+                if (player.Health > 0) {
+                    natives.TakeDamage(player.Damage);
+                    Debug.Log("The enemy's health: " + natives.Health);
+                }
+                    
             }
 
-            if (natives.Health > 0)
+            if (natives.Health > player.Health)
             {
                 WinnerText = "Your ship was lost...";
                 natives.Health = natives.startingHealth;
             }
-            else if (player.Health > 0)
+            else if (player.Health > natives.Health)
             {
                 WinnerText = "Hurrah! You beat the "+enemyName+"!";
                 natives.Health = natives.startingHealth;
