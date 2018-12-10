@@ -29,7 +29,7 @@ namespace GameBattleScripts
         public Enemy(string name, int level, int weaponMod) : base(level)
         {
 
-            enemyMod = rnd.Next(5, 10);
+            enemyMod = rnd.Next(3, 8);
 
             this.Name = name;
             this.Health = level * enemyMod;
