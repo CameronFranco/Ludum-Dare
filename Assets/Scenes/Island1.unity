@@ -402,8 +402,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 221.5, y: -51.8}
-  m_SizeDelta: {x: 159.62, y: 45.72}
+  m_AnchoredPosition: {x: 339, y: -59.3}
+  m_SizeDelta: {x: 287.81, y: 89.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1036390438
 MonoBehaviour:
@@ -426,11 +426,11 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 34beaab8330bf461f97ea3f33505d43a, type: 3}
-    m_FontSize: 0
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 15
+    m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 1
     m_RichText: 1
@@ -820,4 +820,5 @@ MonoBehaviour:
   battleEnd: 0
   enemyName: Cannibals
   enemyLevel: 2
+  weaponMod: 0
   levelText: {fileID: 1036390438}
